@@ -19,12 +19,12 @@ class CategoriesController extends Controller
         // validate request
         $request->validate(
             [
-        'name' => 'required|min:5',
+        'name' => 'required|min:4',
         'description' => 'required',
         ],
             [
                 'required' => 'Inputan :attribute tidak boleh kosong',
-                'min' => 'Inputan :attribute minimal 5 karakter'
+                'min' => 'Inputan :attribute minimal 4 karakter'
             ]
         );
 
@@ -69,12 +69,12 @@ class CategoriesController extends Controller
         // validate request
         $request->validate(
             [
-        'name' => 'required|min:5',
+        'name' => 'required|min:4',
         'description' => 'required',
         ],
             [
                 'required' => 'Inputan :attribute tidak boleh kosong',
-                'min' => 'Inputan :attribute minimal 5 karakter'
+                'min' => 'Inputan :attribute minimal 4 karakter'
             ]
         );
 
