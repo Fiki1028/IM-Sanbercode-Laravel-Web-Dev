@@ -5,12 +5,15 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', [DashboardController::class, 'dashboard']);
 
 Route::get('/register', [FormController::class, 'register']);
 
 Route::post('/welcome', [FormController::class, 'welcome']);
+
+
 
 //CRUD
 
@@ -32,3 +35,15 @@ Route::delete('/category/{id}', [CategoriesController::class, 'destroy']);
 
 // CRUD Products
 Route::resource('/product', ProductController::class);
+
+//Auth
+//Register
+Route::get('/register', [AuthController::class, 'formregister']);
+Route::post('/register', [AuthController::class, 'register']);
+
+//Login
+Route::get('/login', [AuthController::class, 'formlogin']);
+Route::post('/login', [AuthController::class, 'login']);
+
+//logout
+Route::post('/logout', [AuthController::class, 'logout']);
